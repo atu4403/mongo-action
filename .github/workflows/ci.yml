@@ -18,5 +18,6 @@ jobs:
           host port: 27017
           mongo username: 'testuser'
           mongo password: 'testpass'
-      - run: mongo -u testuser -p testpass --eval "printjson(db.serverStatus())"
+      - run: cat /etc/mongo.conf
+        # - run: mongo -u testuser -p testpass --eval "printjson(db.serverStatus())"
         shell: bash
