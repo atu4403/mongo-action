@@ -18,6 +18,5 @@ jobs:
           host port: 27017
           mongo username: 'testuser'
           mongo password: 'testpass'
-      - run: mongo
+      - run: mongo -u testuser -p testpass --eval "printjson(db.serverStatus())"
         shell: bash
-      - run: exit
